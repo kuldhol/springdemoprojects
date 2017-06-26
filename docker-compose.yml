@@ -1,0 +1,16 @@
+democlient:
+  build: democlient
+  ports:
+  - "8081:8081"
+  links:
+  - demoserver
+    
+demoserver:
+  build: demoserver
+  ports:
+  - "8080:8080"
+  links:
+  - mongodb
+    
+mongodb:
+  image: mongo
