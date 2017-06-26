@@ -73,7 +73,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.10</version>
@@ -83,8 +83,7 @@
                     <env>
                         <JAVA_OPTS>""</JAVA_OPTS>
                     </env>
-                    <entryPoint>["java", "$JAVA_OPTS", "-jar", "/${project.build.finalName}.jar", "-Xdebug -Xrunjdwp:server=y,transport=dt_socket,suspend=n"]</entryPoint>
-                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -102,7 +101,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> --> 
         </plugins>
         <finalName>demoserver</finalName>
     </build>
